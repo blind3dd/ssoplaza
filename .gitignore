@@ -1,0 +1,40 @@
+# Sensitive configuration files
+sso_bridge.conf
+krb5.conf
+*.log
+*.tmp
+*cache*
+*session*
+
+# Environment files
+.env*
+*secret*
+*credential*
+*password*
+*token*
+*key*
+
+# Generated files
+~/.sso_aliases
+~/.config/kerberos/
+/tmp/dynamic_*
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Nix
+result
+.direnv/

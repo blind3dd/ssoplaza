@@ -1,0 +1,25 @@
+# SSO Bridge Configuration Template
+# This file bridges Kerberos and Platform SSO
+# Copy to sso_bridge.conf and run auto-discovery to populate values
+
+[kerberos]
+realm = LKDC:SHA1.YOUR_REALM_HASH_HERE
+principal = ${USER}@LKDC:SHA1.YOUR_REALM_HASH_HERE
+config_file = ~/.config/kerberos/krb5.conf
+
+[platform_sso]
+status = requires_setup
+bridge_enabled = true
+node_path = /Platform SSO
+
+[azure]
+status = requires_login
+note = Azure CLI has compatibility issues with Nix version
+alternative = Use Azure portal or system Azure CLI
+
+[system]
+hostname = YOUR_HOSTNAME_HERE
+computer_name = YOUR_COMPUTER_NAME_HERE
+local_hostname = YOUR_LOCAL_HOSTNAME_HERE
+primary_interface = YOUR_PRIMARY_INTERFACE_HERE
+local_ips = YOUR_LOCAL_IPS_HERE
